@@ -74,4 +74,16 @@ window.addEventListener("copy", () => {
     }, 300)
 });
 
-//stretch
+//prevent propigation
+const prvtProp = document.querySelector(".content-destination");
+prvtProp.addEventListener("click", () => {
+    alert("You cliked a base object, Does everything progpigate or bubble up?");
+
+});
+const imgClickPrvt = document.querySelector(".content-destination img");
+imgClickPrvt.addEventListener("click", (e) => {
+        alert("1 message or two?");
+        e.stopPropagation();
+
+    })
+    //stretch
