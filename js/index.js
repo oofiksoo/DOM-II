@@ -35,7 +35,7 @@ window.addEventListener("load", () => {
 
 //6 - wheel
 document.addEventListener("wheel", () => {
-    alert("To hard to use the scrollbar, eh?");
+    alert("To lazy to use the scrollbar, eh?");
 })
 
 //7 - dblClick
