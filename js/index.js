@@ -35,7 +35,7 @@ window.addEventListener("load", () => {
 
 //6 - wheel
 document.addEventListener("wheel", () => {
-    alert("To hard to use the scrollbar, eh?")
+    alert("To hard to use the scrollbar, eh?");
 })
 
 //7 - dblClick
@@ -60,16 +60,18 @@ navFocus.forEach((nitm) => {
 //9 - resize
 window.addEventListener("resize", () => {
     alert("Is this your way of telling me to goto the gym?");
-})
+});
 
-//10 - copy
+//10 - copy + setTimeout Event
 const hideALL = document.querySelectorAll("*");
 window.addEventListener("copy", () => {
     alert("And what do you think your going to do with that?!")
     hideALL.forEach((itm) => {
-        itm.style.display = "none"
+        itm.style.display = "none";
     })
-    alert("Lets see you try that again!")
-})
+    window.setTimeout(() => {
+        alert("Lets see you try that again!");
+    }, 300)
+});
 
 //stretch
