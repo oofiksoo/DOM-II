@@ -12,9 +12,9 @@ lgOnMouse.addEventListener("mouseleave", () => {
 })
 
 //3 - click + preventDefault()
-const nvOnClick = document.querySelectorAll("nav a");
-nvOnClick.forEach((nv) => {
-    nv.addEventListener("click", (e) => {
+const btnOnClick = document.querySelectorAll(".btn");
+btnOnClick.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
         alert("You Clicked Me, but I preventDefault() by design! - Looks like your staying here!");
         e.preventDefault();
 
@@ -22,7 +22,7 @@ nvOnClick.forEach((nv) => {
 })
 
 //4 - keyPress
-const hdrImgRnd = document.querySelector("img");
+const hdrImgRnd = document.querySelector(".intro img");
 document.addEventListener("keypress", () => {
     hdrImgRnd.style.border = "1px solid black";
     hdrImgRnd.style.borderRadius = "150px";
@@ -41,13 +41,35 @@ document.addEventListener("wheel", () => {
 //7 - dblClick
 const hideOnDblClk = document.querySelectorAll("img");
 hideOnDblClk.forEach((itm) => {
-    itm.addEventListener("dblclick", (hidm) => {
+    itm.addEventListener("dblclick", (hitm) => {
         itm.style.display = "none";
     })
 })
 
-
-const ftrfcs = document.querySelector(".footer");
-ftrfcs.onfocus(() => {
-    alert("This is the End!");
+//8 - focus + click + prevent Default
+const navFocus = document.querySelectorAll(".nav a");
+navFocus.forEach((nitm) => {
+    nitm.addEventListener("focus", (e) => {
+        nitm.style.color = "blue";
+    })
+    nitm.addEventListener("click", (e) => {
+        e.preventDefault();
+    })
 })
+
+//9 - resize
+window.addEventListener("resize", () => {
+    alert("Is this your way of telling me to goto the gym?");
+})
+
+//10 - copy
+const hideALL = document.querySelectorAll("*");
+window.addEventListener("copy", () => {
+    alert("And what do you think your going to do with that?!")
+    hideALL.forEach((itm) => {
+        itm.style.display = "none"
+    })
+    alert("Lets see you try that again!")
+})
+
+//stretch
